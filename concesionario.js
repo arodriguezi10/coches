@@ -126,3 +126,42 @@ function deleteCar() {
     }
 }
 
+/*----------------------------------------------------------------------------------------*/
+
+// FASE 3
+
+// MODIFICA TU PRACTIC  A FASE 3
+// PARA QUE MUESTRE EN UN DIV
+// USANDO SETINTERVAL UN RELOJ DIGITAL 
+// QUE SE ACTUALICE CADA SEGUNDO
+
+
+function mostrarHora(){
+
+    let ahora = new Date();
+
+    document.querySelector(".reloj").innerHTML = `
+
+        <div class="reloj">
+            <h1>
+                ${ahora.toLocaleTimeString()}
+            </h1>
+        </div>
+
+    `;
+}
+
+let myInterval = setInterval(mostrarHora, 1000);
+mostrarHora();
+
+// FUNCIÓN PARA DETENER RELOJ
+function deteneryencenderReloj(){
+    if (myInterval) {
+        clearInterval(myInterval);
+        myInterval = null;
+    }else{
+        myInterval = setInterval(mostrarHora, 1000);
+        mostrarHora();
+    }
+
+};  

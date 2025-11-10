@@ -63,3 +63,17 @@ body {
     flex-direction: column;
 }
 
+footer {
+    background-color: beige;
+    text-align: center;
+    display:grid;
+    height: 160px;
+}
+
+.cont footer h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
