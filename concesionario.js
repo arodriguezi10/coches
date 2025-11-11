@@ -154,7 +154,9 @@ function mostrarHora(){
 let myInterval = setInterval(mostrarHora, 1000);
 mostrarHora();
 
-// FUNCIÓN PARA DETENER RELOJ
+// 1ª OPCIÓN PARA PARAR E INICIAR RELOJ CON EL BOTÓN
+
+/*
 function deteneryencenderReloj(){
     if (myInterval) {
         clearInterval(myInterval);
@@ -165,3 +167,18 @@ function deteneryencenderReloj(){
     }
 
 };  
+*/
+
+
+
+// 2ª OPCIÓN PARA PARAR E INICIAR RELOJ CON EL BOTÓN
+document.getElementById('stopClockButton').onclick = function(){
+    if (myInterval) {
+        clearInterval(myInterval);
+        myInterval = null;
+    }else{
+        myInterval = setInterval(mostrarHora, 1000);
+        mostrarHora();
+    }
+
+};
