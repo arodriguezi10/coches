@@ -48,7 +48,8 @@ function add() {
 
     // Imprime el array actualizado por consola
     console.log(cars);
-
+    //añadir a localStorage: key valor
+    localStorage.setItem('cars', JSON.stringify(cars));
     // Reseteamos el formulario
     document.getElementById("formulario").reset();  
 }
@@ -118,6 +119,7 @@ function deleteCar() {
         // Comprueba si se ha eliminado algún coche e imprime un mensaje de éxito o de error
         if (cars.length < initialLength) {
             alert(`Car with plate ${plateToDelete} deleted successfully.`);
+            localStorage.setItem('cars', JSON.stringify(cars));
         } else {
             alert(`Car with plate ${plateToDelete} not found.`);
         }
@@ -196,23 +198,6 @@ document.getElementById('anadirLocalStorage').onclick = function(){
 
 // FASE 5
 
-//Parte 1
-
-/*
-Use of LocalStorage for persistence:
-· Save the array in localStorage every time an object is added or deleted.
-· When the page loads, check if there are stored objects and load them automatically.
-· Add a “Clear Data” button that empties both the array and the localStorage content.
-
-----------------------------------------------------------------------------------
-
-Uso de LocalStorage para la persistencia:
-· Guarda el array en localStorage cada vez que se añada o elimine un objeto.
-· Al cargar la página, comprueba si hay objetos guardados y cárgalos automáticamente.
-· Añade un botón «Borrar datos» que elimine tanto el array como el contenido de localStorage.
-*/
-
-//Guarda el array en localStorage cada vez que se añada o elimine un objeto.
 
 
 
