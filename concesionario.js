@@ -198,8 +198,22 @@ document.getElementById('anadirLocalStorage').onclick = function(){
 
 // FASE 5
 
+// Cambiar el color del reloj, dependiendo del color que se seleccione
 
+const clock = document.querySelector(".reloj");
+const select = document.getElementById("opciones");
 
+const savedColor = localStorage.getItem("clockColor");
+if (savedColor) {
+    clock.style.color = savedColor;
+    select.value = savedColor;
+}
+
+select.addEventListener("change", () =>{
+    const color = select.value;
+    clock.style.color = color;
+    localStorage.setItem("clockColor", color);
+});
 
 
 
