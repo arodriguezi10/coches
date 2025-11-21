@@ -128,7 +128,7 @@ function deleteCar() {
 
 /*----------------------------------------------------------------------------------------*/
 
-// FASE 3
+// FASE 4
 
 // MODIFICA TU PRACTIC  A FASE 3
 // PARA QUE MUESTRE EN UN DIV
@@ -182,3 +182,40 @@ document.getElementById('stopClockButton').onclick = function(){
     }
 
 };
+
+
+//Añadir datos en localStorage
+document.getElementById('anadirLocalStorage').onclick = function(){
+    //Añadir datos a localStorage
+    localStorage.setItem('brand', 'Toyota');
+    localStorage.setItem('color', 'Azul');
+    window.alert('Datos añadidos a Local Storage');
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+// FASE 5
+
+//Parte 1
+
+/*
+Use of LocalStorage for persistence:
+· Save the array in localStorage every time an object is added or deleted.
+· When the page loads, check if there are stored objects and load them automatically.
+· Add a “Clear Data” button that empties both the array and the localStorage content.
+
+----------------------------------------------------------------------------------
+
+Uso de LocalStorage para la persistencia:
+· Guarda el array en localStorage cada vez que se añada o elimine un objeto.
+· Al cargar la página, comprueba si hay objetos guardados y cárgalos automáticamente.
+· Añade un botón «Borrar datos» que elimine tanto el array como el contenido de localStorage.
+*/
+
+//Guarda el array en localStorage cada vez que se añada o elimine un objeto.
+
+
+
+
+
+
