@@ -1,6 +1,14 @@
 // FASE 1
 let cars = [];
 
+const btadd = document.getElementById('btadd');
+const btnmostrar = document.getElementById('btnmostrar');
+const btndelete = document.getElementById('btndelete');
+
+btadd.addEventListener('click', add);
+btnmostrar.addEventListener('click', show);
+btndelete.addEventListener('click', deleteCar);
+
 function add() {
 
     // Esto es para recoger los valores de todos los campos del formulario, incluyendo category y fuel_type
@@ -95,7 +103,7 @@ function show() {
             `| Plate: ${car.plate} ` +
             `| Category: ${car.category.toUpperCase()} ` +
             `| Fuel: ${car.fuel_type.charAt(0).toUpperCase() + car.fuel_type.slice(1)} ` +
-            `| MOT: ${car.mot ? "Yes ✅" : "No ❌"}`;
+            `| MOT: ${car.mot ? "Yes " : "No "}`;
             
         lista.appendChild(item); 
     });
